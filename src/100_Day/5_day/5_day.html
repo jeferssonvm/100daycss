@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="./5_day.css">
     <title>Document</title>
 </head>
@@ -11,16 +15,44 @@
     <main>
         <div class="card">
             <div class="card-header">
-                <p class="card-header__title-left">Weekly report</p >
-                <p class="card-header__subtitle-left"><span class="date1">01. FEB </span> - <span class="date2">07. FEB</span></p>
-                <p class="card-header__title-right">Revenue</p>
-                <p class="card-header__subtitle-right">$ 3621.79</p>
+                <div class="card-header__left-column">
+                    <p class="card-header__title-left">Weekly report</p >
+                    <p class="card-header__subtitle-left"><span class="date1">01. FEB </span> - <span class="date2">07. FEB</span></p>
+                </div>
+                <div class="card-header__right-column">
+                    <p class="card-header__title-right">Revenue</p>
+                    <p class="card-header__subtitle-right">$ 3621.79</p>
+                </div>
             </div>
             <div class="card-section">
-                <div class="card-section__line1"></div>
-                <div class="card-section__line2"></div>
+                <div class="section-line">
+                    <span class="section-line-firt">Views</span>
+                    <span class="section-line-second">Purchases</span>
+                </div>
+                <div class="section-table">
+                        <svg class="tables-views">
+                            <polyline points="9,46 50,12 90,23 130,11 171,38 211,48 251,19"></polyline>    
+                        </svg>
+                        <svg  class="tables-purchases">
+                            <polyline points="9,61 50,50 90,65 130,55 171,61 211,74 251,64"></polyline>    
+                        </svg>
+                </div>
+                <ul class="section-list">
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THU</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                    <li>SUN</li>
+                </ul>
+                
             </div>
+
+                
         </div>
+        
     </main>
 </body>
+</html>
 </html>

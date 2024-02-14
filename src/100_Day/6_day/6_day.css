@@ -1,0 +1,185 @@
+header{
+    height: 50px;
+    width: 100%;
+    color: black;
+    display: flex;
+    .header__previous{
+        flex: 1;
+        display: flex;
+        padding-inline-start: 20px;
+        svg{
+            height: 50px;
+        }
+        .header__subtitle{
+            font-size: 18px;
+            padding-block-start:10px;
+            padding-inline-start: 10px;
+        }
+    }
+    .header__title{
+        flex: 1;
+        font-size: 25px;
+        padding-block-start:10px;
+
+    }
+
+}
+main{
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 400px;
+    height: 400px;
+    background-color: #fcf5ef;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1px;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+
+    .profile{
+        grid-column: 1/3;
+        grid-row: 1/4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-block: 25px;
+        .profile__img{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+
+            &:hover::before{
+                transform: rotate(-180deg);
+            }
+            &:hover::after{
+                transform: rotate(180deg);
+            }
+            &::before{
+                content: "";
+                width: 95px;
+                height: 95px;
+                display: block;
+                position: absolute;
+                z-index: 1;
+                background-color: aquamarine;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-color:  black black black transparent ;
+                transition: all 1.5s ease-in-out;
+
+
+                
+                }
+
+            &::after{
+                content: "";
+                width: 85px;
+                height: 85px;
+                position: absolute;
+                z-index: 2;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-color:  black transparent black black ;
+                transition: all 1.5s ease-in-out;
+
+
+            }
+            
+            & img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50px;
+                position: relative;
+                z-index: 3;
+                
+                
+            }
+
+
+        }
+        .profile__border-img{
+            margin: 5px;
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+
+        .border__first{
+            border-inline-end: 3px solid white;
+            /* :has(.border__second .profile__img:hover){
+                background-color: aqua;
+            } */
+            /* .border__second:hover{
+                transform: rotate(45deg);
+            } */
+        }
+        .border__second{
+            border-inline-start: 3px solid white;
+            .profile__img:hover{
+                transform: rotate(45deg);
+
+            }
+        }
+        .profile__data{
+            text-align: center;
+            .profile__data--name{
+                font-weight: 900;
+            }
+            .profile__data--job{
+                font-weight: 100;
+            }
+        }
+        .profile__buttons{
+            button{
+                width: 120px;
+                height: 30px;
+                border-radius: 10px;
+                border: 2px solid #7b7773;
+                margin: 15px 10px;
+                &:hover{
+                    background-color: #7b7773;
+                    color: white;
+                }
+
+            }
+        }
+
+    }
+    .parameters{
+        background-color: #bdb8b4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        &:hover{
+            background-color: #7b7773;
+            cursor: pointer;
+        }
+    }
+    .parameters--post{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .parameters--like{
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .parameters--follower{
+        grid-column: 3;
+        grid-row: 3;
+    }
+    }
