@@ -1,0 +1,214 @@
+
+.main{
+    background-image: radial-gradient(circle, #071b39, #021c44, #001d4f, #011d5a, #0c1c64);    width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .center{
+        background-color: white;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .satellites{
+    
+            background-color: white;
+            width: 15px;
+            height: 15px;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            position: absolute;
+            &.one{
+                transform-origin: 300% 0%; 
+    
+                animation: rotate_satellites 5s infinite, scale_satellites 5s infinite  ;
+            }
+            &.two{
+                transform-origin: -300% 100%;     
+                animation: rotate_satellites 4s infinite reverse, scale_satellites 4s infinite;
+            }
+            &.three{
+                transform-origin: 200% -400%; 
+                animation: rotate_satellites 7s infinite , scale_satellites 7s infinite;
+            }
+            &.four{
+                transform-origin: 0% 400%; 
+                transform: translatey(10px);
+                animation: rotate_satellites 4s infinite , scale_satellites 4s infinite;
+            }
+            &.five{
+                translate: 0px -35px ;
+                transform-origin: 480% 500%; 
+                animation: rotate_satellites 9s infinite  reverse , scale_satellites 9s infinite;
+            }
+            &.six{
+                translate: 0px 19px ;
+                transform-origin: -204% -200%; 
+                animation: rotate_satellites 6s infinite , scale_satellites 6s infinite;
+            }
+            &.seven{
+                translate: 0px -12px ;
+                transform-origin: 50% -200%; 
+                animation: rotate_satellites 7s infinite , scale_satellites 7s infinite;
+            }
+            &.eight{
+                translate: -10px 15px ;
+                transform-origin: 50% -200%; 
+                animation: rotate_satellites 5s infinite , scale_satellites 5s infinite;
+            }
+
+            &.nine{
+                transform-origin: 0% 400%; 
+                transform: translatey(10px);
+                animation: rotate_satellites 4s infinite  reverse , scale_satellites 5s infinite;
+            }
+            &.ten{
+                transform-origin: 300% 0%; 
+    
+                animation: rotate_satellites 8s infinite reverse , scale_satellites 5s infinite;
+            }
+        }
+        .deformations{
+            position: absolute;
+            background-color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            &.d-one{
+                translate: 13px 12px;
+                transform-origin: 55% 70%;     
+                animation: rotate_satellites 16s infinite, scale_satellites 16s infinite ;
+            }
+            &.d-two{
+                translate: -13px 2px;
+                transform-origin: 50% 0%;     
+                animation: rotate_satellites 10s infinite reverse, scale_satellites 10s infinite;
+            }
+            &.d-three{
+                translate: 5px 6px;
+                transform-origin: 0% 50%;     
+                animation: rotate_satellites 8.2s infinite cubic-bezier(.17,.67,.83,.67), scale_satellites 8.2s infinite ;
+            }
+            &.d-four{
+                translate: 1px 2px;
+                transform-origin: 50% 0%;     
+                animation: rotate_satellites 7.02s infinite  alternate-reverse, scale_satellites 7.02s infinite ;
+            }
+            &.d-five{
+                translate: 1px 2px;
+                width: 20px;
+                height: 20px;
+                transform-origin: -68% 0%;     
+                animation: rotate_satellites 8.5s infinite  alternate-reverse, scale_satellites 8.5s infinite ;
+            }
+            &.d-six{
+                translate: -12px -16px;
+                transform-origin:bottom right 60px;     
+                animation: rotate_satellites 9.5s infinite  reverse, scale_satellites 9.5s infinite ;
+            }
+            &.d-seven{
+                translate: 12px 8px;
+                transform-origin: 50% 0%;     
+                animation: rotate_satellites 10.5s infinite  alternate-reverse, scale_satellites 10.5s infinite ;
+            }
+            
+        }
+    }
+    @keyframes rotate_satellites {
+        0%{
+            
+            rotate: 0deg;
+        }
+        100%{
+            
+            rotate: 360deg;
+        }
+        
+    }
+    @keyframes scale_satellites  {
+        0%{
+            
+            scale: 0.5;
+        }
+        50%{
+            scale: 1.2;
+        }
+        100%{
+            
+            scale: 1;
+        }
+    }
+    
+    /* .ball{
+        background-color: rgb(205, 99, 50);    
+    
+    }
+    .blubb-1{
+        background-color: rgb(205, 50, 50);    
+    }
+    .blubb-2{
+        background-color: rgb(205, 138, 50);    
+    }
+    .blubb-3{
+        background-color: rgb(205, 182, 50);    
+    }
+    .blubb-4{
+        background-color: rgb(161, 205, 50);    
+    }
+    .blubb-5{
+        background-color: rgb(63, 205, 50);    
+    }
+    .blubb-6{
+        background-color: rgb(50, 205, 138);    
+    }
+    .blubb-7{
+        background-color: rgb(50, 184, 205);    
+    }
+    .blubb-8{
+        background-color: rgb(50, 140, 205);    
+    }
+    .sparkle-1{
+        background-color: rgba(0, 154, 193, 0.595);    
+    
+    }
+    .sparkle-2{
+        background-color: rgba(255, 0, 0, 0.784);    
+    
+    }
+    .sparkle-3{
+        background-color: rgb(50, 130, 205);    
+    
+    }
+    .sparkle-4{
+        background-color: rgb(159, 50, 205);    
+    
+    }
+    .sparkle-5{
+        background-color: rgb(80, 5, 5);    
+    
+    }
+    .sparkle-6{
+        background-color: rgb(168, 12, 165);    
+    
+    }
+    .sparkle-7{
+        background-color: rgb(66, 124, 0);    
+    
+    }
+    .sparkle-8{
+        background-color: rgb(197, 191, 0);    
+    
+    }
+    .sparkle-9{
+        background-color: rgb(0, 69, 82);    
+    
+    }
+    .sparkle-10{
+        background-color: rgb(205, 50, 135);    
+    
+    } */

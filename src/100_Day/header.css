@@ -1,0 +1,26 @@
+header{
+    height: 50px;
+    width: 100%;
+    color: black;
+    display: flex;
+    .header__previous{
+        flex: 1;
+        display: flex;
+        padding-inline-start: 20px;
+        svg{
+            height: 50px;
+        }
+        .header__subtitle{
+            font-size: 18px;
+            padding-block-start:10px;
+            padding-inline-start: 10px;
+        }
+    }
+    .header__title{
+        flex: 1;
+        font-size: 25px;
+        padding-block-start:10px;
+
+    }
+
+}
