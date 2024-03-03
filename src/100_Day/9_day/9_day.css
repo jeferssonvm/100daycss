@@ -4,7 +4,6 @@ html{
 .main{
     width: 100vw;
     height: 90vh;
-    background-color: rebeccapurple;
     display: grid;
     place-content: center;
 

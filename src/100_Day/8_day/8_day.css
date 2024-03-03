@@ -1,6 +1,8 @@
 
 .main{
-    background-image: radial-gradient(circle, #071b39, #021c44, #001d4f, #011d5a, #0c1c64);    width: 100vw;
+    /* background-image: radial-gradient(circle, #071b39, #021c44, #001d4f, #011d5a, #0c1c64);     */
+        background-color: black;
+        width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
