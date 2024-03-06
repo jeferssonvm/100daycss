@@ -1,0 +1,112 @@
+main{
+    width: 100vw;
+    height: 94vh;
+    display: grid;
+    place-content: center;
+}
+.content{
+    width: 400px;
+    height: 400px;
+}
+.above{
+    background-color: lightslategrey;
+    width: 100%;
+    height: 80%;
+    position: relative;
+
+}
+.below{
+    background-color: saddlebrown;
+    width: 100%;
+    height: 20%;
+}
+.shoe{
+    width: 118px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    .shoe--img{
+        width: 100%;
+        height: 100%;
+        background-image: url('https://100dayscss.com/codepen/doc-martens.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: center;
+        
+    }
+}
+.shoe__left{
+    bottom: -2px;
+    left: 55%;
+    rotate: -20deg;
+
+    animation: walk-left 2s infinite;
+
+}
+.shoe__right{
+    bottom: -2px;
+    left: 55%;
+    rotate: -20deg;
+    animation: walk-right 2s infinite;
+    
+
+
+}
+@keyframes walk-left {
+    0%{
+        
+        bottom: 0;
+        left: 20%;
+        rotate: 20deg;
+    }
+    25%{
+        
+        bottom: 10px;
+        left: 37%;
+        rotate: 8deg;
+    }
+    50%{
+        bottom: -2px;
+        left: 55%;
+        rotate: -20deg;
+    }
+    75%{
+        bottom: -7px;
+        left: 30%;
+        rotate: 0deg;
+    }
+    100%{
+        bottom: 0;
+        left: 20%;
+        rotate: 20deg; 
+    }
+}
+@keyframes walk-right {
+    0%{
+        
+        bottom: -2px;
+        left: 55%;
+        rotate: -20deg;
+    }
+    25%{
+        bottom: -7px;
+        left: 30%;
+        rotate: 0deg;
+    }
+    50%{
+        bottom: 0;
+        left: 20%;
+        rotate: 20deg; 
+
+    }
+    75%{
+        bottom: 10px;
+        left: 37%;
+        rotate: 8deg;
+    }
+    100%{
+        bottom: -2px;
+        left: 55%;
+        rotate: -20deg;
+    }
+}
