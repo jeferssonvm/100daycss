@@ -1,0 +1,76 @@
+html{
+    font-size: 62.5%;
+    font-family: "Open Sans", sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 94vh;
+    display: grid;
+    place-content: center;
+}
+.content-Tooltip{
+    width: 400px;
+    height: 400px;
+    background-color: #4CB6DE;
+    color: white;
+    font-size: 2.4rem;
+    padding: 18px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    &::before{
+        color: #6ac2e3;
+        font-family: Arial;
+        line-height: 0px;
+		content: "„";
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 13px;
+        font-size: 17rem;
+        z-index: 1;
+    }
+    .Tooltip__text{
+        position: relative;
+        z-index: 2;
+        .Tooltip__text--description{
+            background-color: #286F8A;
+            cursor: pointer;
+            position: relative;
+            &:hover:before{
+                background-color: #286F8A;
+                content: "a persistent disturbing preoccupation with an often unreasonable idea or feeling";
+                width: 180%;
+                height: auto;
+                position: absolute;
+                font-size: 1.6rem;
+                text-align: center;
+                padding: 10px 10px;
+                line-height: 15px;
+                top:-89px;
+                left: -30%;
+                z-index: 2;
+                
+            }
+            &:hover:after{
+                content: "";
+                position: absolute;
+                top: -23px;
+                left: 50%;
+                margin-left: -9px;
+                width: 18px;
+                height: 18px;
+                background: #286F8A;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .Tooltip__author{
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        font-style: italic;
+
+    }
+}
