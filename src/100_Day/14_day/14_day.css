@@ -1,0 +1,287 @@
+.main{
+    width: 100vw;
+    height: 94vh;
+    display: grid;
+    place-content: center;
+}
+.content{
+    width: 400px;
+    height: 400px;
+    background-color: #4B4841;
+    display: grid;
+    place-content: center;
+
+}
+.content-card {
+    height: 180px;
+    width: 321px;
+    padding: 5px;;
+    position: relative;
+    
+}
+.card{
+    width: 320px;
+	height: 180px;
+    background-color: #FFCE4E;
+    border: 2px solid linen;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.content-card:hover .card-bycicle{
+    transform: perspective(500px) rotateX(180deg);
+
+}
+.content-card:hover .card-helicopter{
+    transform: perspective(500px) rotateX(360deg);
+
+}
+.card-bycicle{
+    transform: perspective(500px) rotateX(0deg);
+}
+
+
+.card-helicopter{
+    transform: perspective(500px) rotateX(180deg);
+}
+
+.card-bycicle{
+    
+    .card-bycicle__canvas{
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        background-color: #FFCE4E;
+
+        
+    }
+    .card-bycicle__img{
+        display: flex;
+        align-items: end;
+        height: 77px;
+        width: 100%;
+        img{
+            width: 100%;
+            animation: move-cycle 1s ease-in-out infinite 2s;
+        }
+    }
+    .card__floor{
+        background-color: #4B4841;
+        position: absolute;
+        bottom: 6px;
+        left: 110%;
+        width: 10px;
+        height: 5px;
+        border-radius: 20px;
+        animation: run 1s linear infinite;
+    }
+    .card__floor--1{
+        width: 12px;
+        animation-delay: 1s;
+    }
+    .card__floor--2{
+        width: 16px;
+        animation-delay: 1.5s;
+    }
+    .card__floor--3{
+        width: 17px;
+        animation-delay: 2s;
+    }
+    .card__floor--4{
+        width: 10px;
+        animation-delay: 3s;
+    }
+    .card__floor--5{
+        width: 16px;
+        animation-delay: 4s;
+    }
+    .card__floor--6{
+        width: 14px;
+        animation-delay: 0.5s;
+    }
+    .card__floor--7{
+        width: 12px;
+        animation-delay: 2.5s;
+    }
+    .card__floor--8{
+        width: 16px;
+        animation-delay: 2.9s;
+    }
+    .card__floor--9{
+        width: 14px;
+        animation-delay: 1.2s;
+    }
+    .card__floor--10{
+        width: 14px;
+        animation-delay: 2.3s;
+    }
+    .card__floor--11{
+        width: 14px;
+        animation-delay: 0.2s;
+    }
+}
+
+.card-helicopter{
+    .card-helicopter__canvas{
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        background-color: #FFCE4E;
+        .card-helicopter__img{
+            display: flex;
+            align-items: end;
+            height: 77px;
+            width: 100%;
+            z-index: 3;
+            position: relative;
+            animation: helicopter-fly 3s linear infinite;
+        }
+        .card__wind{
+            width: 20px;
+            height: 4px;
+            border-radius: 20px;
+            background-color: #4B4841;
+            position: absolute;
+            z-index: 0;
+            right:-20px;
+            animation: run-wind 2s linear infinite;
+            
+
+        }
+        .card__wind--1{
+            top: 20%;
+            animation-delay: 2.1s;
+
+        }
+        .card__wind--2{
+            top: 40%;
+            animation-delay: 2.4s;
+
+        }
+        .card__wind--3{
+            top: 60%;
+            animation-delay: 1.8s;
+
+        }
+        .card__wind--4{
+            top: 80%;
+            animation-delay: 1.9s;
+        }
+        .card__wind--5{
+            top: 90%;
+            animation-delay: 2.5s;
+
+        }
+        .card__wind--6{
+            top: 20%;
+            animation-delay: 0s;
+
+        }
+        .card__wind--7{
+            top: 40%;
+            animation-delay: 0.026s;
+        }
+        .card__wind--8{
+            top: 60%;
+            animation-delay: 0.38s;
+
+        }
+        .card__wind--9{
+            top: 80%;
+            animation-delay: 0.4s;
+
+        }
+        .card__wind--10{
+            top: 20%;
+            animation-delay: 0.89s;
+        }
+        .card__wind--11{
+            top: 40%;
+            animation-delay: 0.76s;
+        }
+        .card__wind--12{
+            top: 60%;
+            animation-delay: 0.46s;
+        }
+        .card__wind--13{
+            top: 80%;
+            animation-delay: 0.44s;
+        }
+        .card__wind--14{
+            top: 20%;
+            animation-delay: 3.76s;
+        }
+        .card__wind--15{
+            top: 40%;
+            animation-delay: 0.66s;
+        }
+        .card__wind--16{
+            top: 60%;
+            animation-delay: 0.9s;
+        }
+        .card__wind--17{
+            top: 80%;
+            animation-delay: 0.2s;
+        }
+        .card__wind--18{
+            top: 20;
+            animation-delay: 0.82s;
+        }
+        .card__wind--19{
+            top: 40%;
+            animation-delay: 1.8s;
+        }
+        .card__wind--20{
+            top: 60%;
+        }
+    }
+}
+
+
+
+@keyframes run{
+    from{
+    left: 110%;
+
+    }
+    to{
+    left: -10%;
+
+    }
+}
+@keyframes move-cycle {
+    from{
+        height: 100%;
+    }
+    to{
+        height: 98.5%;
+    }
+}
+@keyframes run-wind {
+    from{
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(-200px);
+    }
+}
+@keyframes helicopter-fly {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
