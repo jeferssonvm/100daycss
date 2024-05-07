@@ -1,0 +1,58 @@
+.main{
+    width: 100vw;
+    height: 94vh;
+    display: grid;
+    place-content: center;
+    /* background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0) 10px,
+        rgba(0, 0, 0, 0) 10px,
+        #000000 40px,
+        #000000 60px
+      ); */
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0) 20px,
+        rgba(0, 0, 0, 0) 50px,
+        #000000 40px,
+        #000000 60px
+      );
+}
+.content{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(90deg, #0c1011 0%, #2b2b2b 100%);
+    display: grid;
+    place-content: center;
+}
+.content-svg{
+    background-color: #353535;
+    width: 163px;
+    height: 140px;
+    .dark{
+        fill: #AAAAAA;
+        position: absolute;
+
+    
+    }
+    .middle{
+    
+        position: absolute;
+        fill: #CCCCCC;
+    }
+    .light{
+        position: absolute;
+        fill: #EEEEEE;
+    }
+    &:hover .dark{
+        fill: #CCCCCC;
+    }
+    &:hover .light{
+        fill: #AAAAAA;  
+    }
+    &:hover .middle{
+        fill: #EEEEEE;
+    }
+
+
+}
